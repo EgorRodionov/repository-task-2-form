@@ -1,0 +1,41 @@
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace Zadanie_2__4_
+{
+    public partial class Form1 : Form
+    {
+        public Form1()
+        {
+            InitializeComponent();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            int cout = 7;
+            for (int i = 1; i < 6; i++)
+            {
+                for (int j = 0; j < 7; j++)
+                {
+                    if (i > j)
+                        textBox1.Text += cout.ToString() + "    "; 
+                    
+                }
+                textBox1.Text += "\r\n";
+                cout--;
+            }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+    }
+}
