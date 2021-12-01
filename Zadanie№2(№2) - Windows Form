@@ -29,9 +29,15 @@ namespace Zadanie_2__2_
                     curmonth = 12;
                 curmonth--;
             }
-
+            try
+            {
             string[] months = { "Январь", "Февраль", "Март", "Апрель", "Май", "Июнь", "Июль", "Август", "Сентябрь", "Октябрь", "Ноябрь", "Декабрь" };
             textBox2.Text = months[curmonth];
+            }
+            catch(Exception)
+            {
+                MessageBox.Show("Ошибка! Введите положительное число месяцев.");
+            }
         }
 
         private void button2_Click(object sender, EventArgs e)
